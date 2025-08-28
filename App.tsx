@@ -47,15 +47,15 @@ export default function App() {
       animationOut={'slideOutRight'}
       animationOutTiming={1000}
       >
-        <Text>Quer a vaga?</Text>
-        <Text>Informe seus dados</Text> 
+        <Text style={styles.text}>Quer a vaga?</Text>
+        <Text style={styles.text}>Informe seus dados</Text> 
         
         <TextInput placeholder='Nome:' value={nome} onChangeText={texto => setNome(texto)} style={styles.textInput}/>
         <TextInput placeholder='Data:' value={data} onChangeText={texto => setData(texto)} style={styles.textInput}/>
         <TextInput placeholder='Valor:' value={valor} onChangeText={texto => setValor(texto)} style={styles.textInput}/>
 
       <TouchableOpacity  
-      style={styles.button}
+      style={styles.button2}
       onPress={() => { 
           Alert.alert('Enviado');
           Limpar();
@@ -82,15 +82,15 @@ export default function App() {
       animationOut={'slideOutRight'}
       animationOutTiming={1000}
       >
-        <Text>Quer a vaga?</Text>
-        <Text>Informe seus dados</Text>
+        <Text style={styles.text}>Quer a vaga?</Text>
+        <Text style={styles.text}>Informe seus dados</Text>
 
         <TextInput placeholder='Nome:' value={nome} onChangeText={texto => setNome(texto)} style={styles.textInput}/>
         <TextInput placeholder='Data:' value={data} onChangeText={texto => setData(texto)} style={styles.textInput}/>
         <TextInput placeholder='Valor:' value={valor} onChangeText={texto => setValor(texto)} style={styles.textInput}/>
 
         <TouchableOpacity  
-         style={styles.button}
+         style={styles.button2}
          onPress={()=> { Alert.alert('Enviado');
          Limpar();
          }
@@ -116,15 +116,15 @@ export default function App() {
       animationOut={'slideOutRight'}
       animationOutTiming={1000}
       >
-        <Text>Quer a vaga?</Text>
-        <Text>Informe seus dados</Text>
+        <Text style={styles.text}>Quer a vaga?</Text>
+        <Text style={styles.text}>Informe seus dados</Text>
         
         <TextInput placeholder='Nome:' value={nome} onChangeText={texto => setNome(texto)} style={styles.textInput}/>
         <TextInput placeholder='Data:' value={data} onChangeText={texto => setData(texto)} style={styles.textInput}/>
         <TextInput placeholder='Valor:' value={valor} onChangeText={texto => setValor(texto)} style={styles.textInput}/>
 
       <TouchableOpacity  
-      style={styles.button}
+      style={styles.button2}
       onPress={()=> { Alert.alert('Enviado');
       Limpar();
        }
@@ -147,7 +147,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -160,10 +160,10 @@ const styles = StyleSheet.create({
     marginRight: '10%',
     alignItems: 'center',
     justifyContent: 'center',
-    borderColor: '#15caff',
+    borderColor: '#242222ff',
     borderWidth: 5,
     borderRadius: 20,
-  },
+},
 titleText: {
   fontSize: 40,
   fontWeight: 'bold',
@@ -192,6 +192,19 @@ button: {
   shadowOpacity: 0.3,
   shadowRadius: 3,
 },
+button2: {
+  backgroundColor: 'green',
+  paddingVertical: 12,
+  paddingHorizontal: 25,
+  borderRadius: 10,
+  marginVertical: 10,
+  alignItems: 'center',
+  elevation: 3,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.3,
+  shadowRadius: 3,
+},
 buttonText: {
   color: '#fff',
   fontSize: 16,
@@ -203,7 +216,7 @@ imagemLogo:{
 textInput: {
   width: '80%',
   height: 45,
-  borderColor: '#1E90FF',
+  borderColor: 'black',
   borderWidth: 2,
   borderRadius: 10,
   paddingHorizontal: 10,
@@ -225,11 +238,17 @@ fecharButton: {
   shadowOpacity: 0.2,
   shadowRadius: 2,
 },
-
 fecharButtonText: {
   color: '#fff',
   fontSize: 16,
   fontWeight: 'bold',
 },
+text: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
 
 });
